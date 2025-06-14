@@ -6,7 +6,7 @@ from datetime import datetime
 app = Flask(__name__)
 
 # Use 'data' folder inside the project for sections
-DATA_FOLDER = 'data'
+DATA_FOLDER = 'uploads'
 SECTIONS = ['Material', 'Store', 'Employee']
 
 @app.route('/')
