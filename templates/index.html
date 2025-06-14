@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
 <body>
+    
     <h2>Service Book</h2>
     <form method="get" action="/">
         <select name="section" onchange="this.form.submit()">
@@ -14,6 +15,11 @@
             {% endfor %}
         </select>
     </form>
+    <div class="sidebar">
+    <img src="{{ url_for('static', filename='pmpml_logo_80.png') }}" alt="Logo" class="logo">
+    <h2>Sections</h2>
+    <ul>
+    </ul>    
     <form action="/upload" method="post" enctype="multipart/form-data">
         <input type="hidden" name="section" value="{{ selected_section }}">
         <input type="file" name="file">
@@ -36,5 +42,6 @@
         </table>
         <button type="submit">Delete Selected</button>
     </form>
+    
 </body>
 </html>
