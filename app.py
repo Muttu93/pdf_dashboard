@@ -56,5 +56,26 @@ def delete_files():
 def view_file(section, filename):
     return send_from_directory(os.path.join(app.config['UPLOAD_FOLDER'], section), filename)
 
+import webbrowser
+from flask import Flask, render_template, request, redirect, url_for, send_from_directory
+import os
+from datetime import datetime
+
+app = Flask(__name__)
+DATA_FOLDER = 'data'
+app.config['DATA_FOLDER'] = DATA_FOLDER
+
+@app.route('/')
+def index():
+    return render_template('index.html')
+
+# your other routes here ...
+
 if __name__ == '__main__':
-    app.run(debug=True)
+    # Automatically open browser
+    webbrowser.open("http://127.0.0.1:5000")
+    app.run(debug=False)
+
+
+# if __name__ == '__main__':
+#    app.run(debug=True)
