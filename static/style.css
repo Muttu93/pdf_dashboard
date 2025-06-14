@@ -4,6 +4,13 @@ body {
     padding: 20px;
 }
 
+.logo {
+    width: 150px;
+    display: block;
+    margin: 0 auto 10px;
+}
+
+
 h2 {
     color: #333;
     text-align: center;
